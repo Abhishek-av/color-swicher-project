@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js : Color Changer Project</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1{
+            text-align: center;
+            background-color: rgb(37, 37, 37);
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 5px;
+        }
+
+        .parent{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh
+
+
+        }
+
+        .box{
+
+            width: 200px;
+            height: 200px;
+           border-radius: 8px;
+            margin-right: 14px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        
+
+        #red{
+            background-color: red;
+            box-shadow: rgba(255, 254, 254, 0.02) 0px 1px 3px 0px, rgba(255, 255, 255, 0.15) 0px 0px 0px 1px;
+        }
+        #blue{
+            background-color: blue;
+            box-shadow: rgba(255, 255, 255, 0.02) 0px 1px 3px 0px, rgba(250, 250, 250, 0.15) 0px 0px 0px 1px;
+            
+        }
+
+        #yellow{
+            background-color: yellow;
+            box-shadow: rgba(255, 255, 255, 0.02) 0px 1px 3px 0px, rgba(255, 255, 255, 0.15) 0px 0px 0px 1px;
+        }
+
+        #grey{
+            background-color: grey;
+            box-shadow: rgba(255, 255, 255, 0.02) 0px 1px 3px 0px, rgba(255, 255, 255, 0.15) 0px 0px 0px 1px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+   
+    <h1>JavaScript : Box Onclick Color Switcher</h1>
+    <div class="parent">
+    
+    <div class="box" id="red"></div>
+    <div class="box" id="blue"></div>
+    <div class="box" id="yellow"></div>
+    <div class="box" id="grey"></div>
+
+
+</div>
+
+<script>
+
+   const boxes = document.querySelectorAll('.box');
+
+   const body = document.querySelector('body');
+
+   boxes.forEach(function(box){
+
+    box.addEventListener('click', function(e){
+
+        if(e.target.id === 'red'){
+        body.style.backgroundColor = e.target.id;
+        }
+
+        if(e.target.id === 'blue'){
+        body.style.backgroundColor = e.target.id;
+        }
+
+        if(e.target.id === 'yellow'){
+        body.style.backgroundColor = e.target.id;
+        }
+        if(e.target.id === 'grey'){
+        body.style.backgroundColor = e.target.id;
+        }
+    })
+
+   })
+
+
+
+
+/******************************** By developerabhi.in  ***********************************/
+
+</script>
+    
+</body>
+</html>
